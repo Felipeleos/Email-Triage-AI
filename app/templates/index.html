@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AutoU Email Triage AI</title>
+</head>
+<body>
+    <h2>AutoU - Email Triage AI</h2>
+    <form method="post" action="/classify">
+        <textarea name="email_text" rows="8" cols="80" required></textarea><br><br>
+        <button type="submit">Classificar</button>
+    </form>
+
+    {% if result %}
+    <p><strong>Classificação:</strong> {{ result.classification }}</p>
+    <p><strong>Resposta:</strong> {{ result.response }}</p>
+    {% endif %}
+</body>
+</html>
